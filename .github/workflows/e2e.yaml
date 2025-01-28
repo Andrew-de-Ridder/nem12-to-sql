@@ -2,6 +2,7 @@ name: Run end-to-end tests
 
 on:
   pull_request:
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
