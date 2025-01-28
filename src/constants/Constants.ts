@@ -1,0 +1,9 @@
+export const MINUTES_IN_DAY = 1_440;
+export const INDEX_CONSUMPTION_BEGIN = 2;
+export const INDEX_INTERVAL_DATE = 1;
+export const INDEX_INTERVAL_LENGTH = 8;
+export const INDEX_NMI = 1;
+export const MILLISECONDS_IN_MINUTE = 60_000;
+export const RECORD_TYPE_200 = '200';
+export const RECORD_TYPE_300 = '300';
+export const RECORD_TYPE_500 = '500';

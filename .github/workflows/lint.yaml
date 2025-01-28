@@ -1,0 +1,26 @@
+name: Ensure code linting passes
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: build-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '22.13.1'
+
+      - run: |
+          npm install
+
+      - name: lint
+        run: |
+          npm run lint

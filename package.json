@@ -1,0 +1,59 @@
+{
+  "name": "nem12-to-sql",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "init": "node -e \"require('fs-extra').copySync('.env.example', '.env')\"",
+    "start": "cross-env NODE_ENV=production node --experimental-strip-types index.ts",
+    "tsc": "tsc",
+    "lint": "npx eslint .; npx prettier . --check",
+    "lint:fix": "npx eslint --fix .; npx prettier . --write",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "dotenvx run -f e2e/.env.e2e -- node --experimental-strip-types index.ts; node --experimental-strip-types ./e2e/compare.ts ./e2e/output.sql ./e2e/expected.sql;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrew-de-Ridder/nem12-to-sql.git"
+  },
+  "author": "Andrew de Ridder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andrew-de-Ridder/nem12-to-sql/issues"
+  },
+  "homepage": "https://github.com/Andrew-de-Ridder/nem12-to-sql#readme",
+  "description": "",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.34.0",
+    "@eslint/js": "^9.19.0",
+    "@types/node": "^22.10.10",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.19.0",
+    "fs-extra": "^11.3.0",
+    "prettier": "3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.21.0",
+    "vitest": "^3.0.4"
+  },
+  "type": "module",
+  "imports": {
+    "#config": {
+      "node": "./src/config/ConfigFetcher.ts"
+    },
+    "#constants": {
+      "node": "./src/constants/Constants.ts"
+    },
+    "#io": {
+      "node": "./src/io/index.ts"
+    },
+    "#processors": {
+      "node": "./src/processors/RecordProcessor.ts"
+    },
+    "#parsers": {
+      "node": "./src/parsers/index.ts"
+    },
+    "#types": {
+      "node": "./src/types/types.d.ts"
+    }
+  }
+}
