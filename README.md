@@ -164,7 +164,7 @@ All of these things would go to inform the choices made, and amount of effort ta
 
 ### What other ways could you have done this project?
 
-I did consider creating a Kotlin or Java codebase for this tool. Both these JVM frameworks can be used together with
+I did consider creating a Kotlin or Java codebase for this tool. Both these JVM languages can be used together with
 powerful ORMs such as Hibernate. I think I would have gone the same way of creating essentially a CLI for this task, but
 in Java/Kotlin.
 
