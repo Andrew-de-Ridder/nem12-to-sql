@@ -2,6 +2,7 @@ name: Run unit tests
 
 on:
   pull_request:
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
@@ -9,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2

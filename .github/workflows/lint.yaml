@@ -2,6 +2,7 @@ name: Ensure code linting passes
 
 on:
   pull_request:
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
@@ -9,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
