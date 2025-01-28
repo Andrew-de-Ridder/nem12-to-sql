@@ -6,7 +6,7 @@ import readline from 'readline';
 
 export function getLineReader(): Interface {
   const filepath = fetchInputFilePath();
-  console.log(`Reading NEM13 file from path: ${filepath}`);
+  console.log(`Reading NEM12 file from path: ${filepath}`);
   const fileStream: ReadStream = fs.createReadStream(filepath);
   return readline.createInterface({
     crlfDelay: Infinity,
