@@ -142,8 +142,13 @@ conventions added such as
 
 ### What would you do better next time?
 
-I think that this tool is shiny enough for now 😉. There is `linting`, `type-safety`, `unit tests`,
-`end-to-end tests`, `code styling`, `.env configuration`, `CI automation`, `Github repo setup and configuration`,
+I think that one thing that the approach is missing is a god set of validators that run on the input
+file to make sure that it is in the expected format. At the moment, if a malformed NEM12 file is provided, the program 
+will not detect it, and so either crash or produce incorrect output. Having a robust set of validators before the 
+main processing, as well as a way to report these inconsistencies to the user, would be a big improvement.
+
+As far as other improvements, I think that this tool is shiny enough for now 😉. There is `linting`, `type-safety`, 
+`unit tests`,`end-to-end tests`, `code styling`, `.env configuration`, `CI automation`, `Github repo setup and configuration`,
 `project initialisation tooling`, `documentation` and more. I would seek feedback on the approach before embarking on
 further improvements. Maybe a UI would be nice though
 
